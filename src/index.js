@@ -2,7 +2,7 @@
 
 import React from "react";
 import PropTypes from "prop-types";
-import ReactDOM from "react-dom";
+
 import moment from "moment-timezone";
 import { RRule, RRuleSet, rrulestr } from "rrule";
 
@@ -35,28 +35,15 @@ export default class Calendar extends React.Component {
       singleEvents: [], //single day events
       userTimezone: moment.tz.guess(),
       showFooter: props.showFooter,
-      selectedMonthYear: moment(props.selectedMonthYear),
+      selectedMonthYear:
+        moment(props.selectedMonthYear) || moment().startOf("month").utc(true),
     };
 
     this.lastMonth = this.lastMonth.bind(this);
     this.nextMonth = this.nextMonth.bind(this);
   }
 
-  sendData = () => {
-    this.props.current("")
-  }
-
   async componentDidMount() {
-    if (this.state.selectedMonthYear) {
-      this.setState({
-        current: moment(
-          `${moment(this.state.selectedMonthYear)
-            .startOf("month")
-            .utc(true)
-            .format("MMMM YYYY")}`
-        ),
-      });
-    }
     if (
       Boolean(this.props.language) &&
       availableLanguages.includes(this.props.language.toUpperCase())
@@ -107,18 +94,20 @@ export default class Calendar extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    nextProps.selectedMonthYear.isValid()
-      ? this.setState({
-          current: moment(
-            `${moment(nextProps.selectedMonthYear)
-              .startOf("month")
-              .utc(true)
-              .format("MMMM YYYY")}`
-          ),
-        })
-      : this.setState({
-          current: moment(`${moment().startOf("month").utc(true)}`),
-        });
+    if (nextProps.selectedMonthYear) {
+      nextProps.selectedMonthYear.isValid()
+        ? this.setState({
+            current: moment(
+              `${moment(nextProps.selectedMonthYear)
+                .startOf("month")
+                .utc(true)
+                .format("MMMM YYYY")}`
+            ),
+          })
+        : this.setState({
+            current: moment(`${moment().startOf("month").utc(true)}`),
+          });
+    }
   }
 
   //get easy to work with events and singleEvents from response
@@ -345,6 +334,8 @@ export default class Calendar extends React.Component {
     let eventsEachDay = [...Array(this.state.current.daysInMonth())].map(
       (e) => []
     ); //create array of empty arrays of length daysInMonth
+
+    console.log("eventsEachDay", eventsEachDay);
 
     events.forEach((event) => {
       if (event.recurrence) {
@@ -813,4 +804,3 @@ Calendar.defaultProps = {
   showFooter: true,
   selectedMonthYear: null,
 };
-

@@ -1,12 +1,12 @@
 # React Google Calendar
 
-![npm (scoped)](https://img.shields.io/npm/v/@ericz1803/react-google-calendar) [![Build Status](https://travis-ci.com/ericz1803/react-google-calendar.svg?token=kgRjisW2saVwCyBzYyN5&branch=master)](https://travis-ci.com/ericz1803/react-google-calendar)   
+![npm (scoped)](https://img.shields.io/npm/v/@chervint/react-google-calendar) [![Build Status](https://travis-ci.com/chervint/react-google-calendar.svg?token=kgRjisW2saVwCyBzYyN5&branch=master)](https://travis-ci.com/chervint/react-google-calendar)   
   
 A react component that displays an event calendar using data from google's calendar api. It is intended to replace the embedded google calendar.
 
 It handles reccuring events, deleted events, and changed events. It also handles and displays events of all lengths in a very similar way to google calendar and supports multiple calendars. All events are displayed in the user's timezone.
 
-See it in action [here](https://ericz1803.github.io/react-test-calendar/) or try it yourself in CodeSandbox [here](https://codesandbox.io/s/kind-davinci-12qze).
+See it in action [here](https://chervint.github.io/react-test-calendar/) or try it yourself in CodeSandbox [here](https://codesandbox.io/s/kind-davinci-12qze).
 
 ![picture of calendar](example.png)
 
@@ -16,7 +16,7 @@ Design inspired by [this calendar](https://codepen.io/knyttneve/pen/QVqyNg) and 
 
 ```
 1. npm install --save react react-dom @emotion/react
-2. npm install --save @ericz1803/react-google-calendar
+2. npm install --save @chervint/react-google-calendar
 ```
 
 ## Usage
@@ -32,7 +32,7 @@ You can find it by going to a calendar's settings and scrolling down to the sect
 
 ```js
 import React from "react";
-import Calendar from "@ericz1803/react-google-calendar";
+import Calendar from "@chervint/react-google-calendar";
 
 const API_KEY = "YOUR_API_KEY";
 let calendars = [
@@ -84,7 +84,7 @@ To customize other aspects of the calendar (eg. borders, colors of the calendar)
 
 ```js
 import React from "react";
-import Calendar from "@ericz1803/react-google-calendar";
+import Calendar from "@chervint/react-google-calendar";
 import { css } from "@emotion/react";
 
 const API_KEY = "YOUR_API_KEY";

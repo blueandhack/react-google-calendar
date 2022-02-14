@@ -80,7 +80,7 @@ export default class Tooltip extends React.Component {
     } else {
       calendarName = <div></div>;
     }
-
+    const link = this.props.startTime.format("MM DD YYYY").split(" ")
     return (
       <Popper modifiers={[{ name: 'preventOverflow', options: { altAxis: true } }]}>
         {({ ref, style, placement, arrowProps }) => (
@@ -128,7 +128,7 @@ export default class Tooltip extends React.Component {
               {location}
               {calendarName}
               <a 
-                href={this.state.eventURL}
+                href={`https://calendar.google.com/calendar/u/0/r/day/${link[2]}/${link[0]}/${link[1]}`}
                 target="_blank"
                 onMouseDown={e => e.preventDefault()}
                 css={{
@@ -136,7 +136,7 @@ export default class Tooltip extends React.Component {
                   tabIndex: -1
                 }}
               >
-                Copy to Calendar
+                Go to Calendar
               </a>
             </div>
           </div>

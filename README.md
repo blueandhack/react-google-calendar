@@ -1,12 +1,12 @@
 # React Google Calendar
 
-![npm (scoped)](https://img.shields.io/npm/v/@chervint/react-google-calendar) [![Build Status](https://travis-ci.com/chervint/react-google-calendar.svg?token=kgRjisW2saVwCyBzYyN5&branch=master)](https://travis-ci.com/chervint/react-google-calendar)   
+![npm (scoped)](https://img.shields.io/npm/v/@chervint/react-google-calendar) [![Build Status](https://app.travis-ci.com/chervintani/react-google-calendar-1.svg?branch=master)](https://app.travis-ci.com/github/chervintani/react-google-calendar-1)   
   
 A react component that displays an event calendar using data from google's calendar api. It is intended to replace the embedded google calendar.
 
 It handles reccuring events, deleted events, and changed events. It also handles and displays events of all lengths in a very similar way to google calendar and supports multiple calendars. All events are displayed in the user's timezone.
 
-See it in action [here](https://chervint.github.io/react-test-calendar/) or try it yourself in CodeSandbox [here](https://codesandbox.io/s/kind-davinci-12qze).
+See it in action [here](https://chervint.github.io/react-test-calendar/) or try it yourself in CodeSandbox [here](https://codesandbox.io/s/purple-architecture-hp8p8).
 
 ![picture of calendar](example.png)
 

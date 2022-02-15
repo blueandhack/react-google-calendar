@@ -709,7 +709,7 @@ export default class Calendar extends React.Component {
             minWidth: "300px",
             position: "relative",
             borderColor: "LightGray",
-            color: "#51565d",
+            color: "#111111",
           },
           _.get(this.props.styles, "calendar", {}),
         ]}

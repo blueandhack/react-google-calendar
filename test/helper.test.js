@@ -147,7 +147,7 @@ describe("isMultiEvent function", () => {
 
 describe("pSBC function", () => {
   test("hex code", () => {
-    expect(pSBC(-0.35, '#F7C819')).toEqual('#396cce');
+    expect(pSBC(-0.35, '#F7C819')).toEqual('#c7a114');
   });
 
   test("rgb", () => {

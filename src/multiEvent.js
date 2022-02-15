@@ -183,7 +183,7 @@ MultiEvent.propTypes = {
 }
 
 MultiEvent.defaultProps = {
-  color: '#4786ff',
+  color: '#F7C819',
   length: 1,
   arrowLeft: false,
   arrowRight: false,

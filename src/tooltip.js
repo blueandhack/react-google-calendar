@@ -96,7 +96,7 @@ export default class Tooltip extends React.Component {
               text-align: left;
               padding: 5px;
               border-radius: 6px;
-              color: #51565d;
+              color: #111111;
               border: 2px solid rgba(81, 86, 93, 0.1);
               position: absolute;
               z-index: 1;

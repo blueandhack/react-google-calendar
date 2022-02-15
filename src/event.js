@@ -68,7 +68,7 @@ export default class Event extends React.Component {
                 <div 
                   className="event-text" 
                   css={[{
-                    color: "#51565d",
+                    color: "#11111",
                     padding: "3px 0px 3px 20px",
                     marginRight: "5px",
                     overflowX: "hidden",
@@ -145,5 +145,5 @@ Event.propTypes = {
 }
 
 Event.defaultProps = {
-  color: '#4786ff'
+  color: '#F7C819'
 }

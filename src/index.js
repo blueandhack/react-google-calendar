@@ -220,12 +220,16 @@ export default class Calendar extends React.Component {
 
   //sets current month to previous month
   lastMonth() {
-    this.setState({ current: this.state.current.subtract(1, "months") });
+    const newCurrent = this.state.current.subtract(1, "months");
+    this.props.updatedMonthYear(newCurrent);
+    this.setState({ current: newCurrent });
   }
 
   //sets current month to following month
   nextMonth() {
-    this.setState({ current: this.state.current.add(1, "months") });
+    const newCurrent = this.state.current.add(1, "months");
+    this.setState(newCurrent);
+    this.props.updatedMonthYear(newCurrent);
   }
 
   clearEvents() {
@@ -803,4 +807,5 @@ Calendar.defaultProps = {
   showArrow: true,
   showFooter: true,
   selectedMonthYear: null,
+  updatedMonthYear: null,
 };

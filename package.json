@@ -1,6 +1,6 @@
 {
   "name": "@chervint/react-google-calendar",
-  "version": "4.2.14",
+  "version": "4.2.15",
   "description": "React Google Calendar Component",
   "main": "index.js",
   "scripts": {

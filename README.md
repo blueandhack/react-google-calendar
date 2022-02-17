@@ -1,6 +1,6 @@
 # React Google Calendar
 
-![npm (scoped)](https://img.shields.io/npm/v/@chervint/react-google-calendar) [![Build Status](https://app.travis-ci.com/chervintani/react-google-calendar-1.svg?branch=master)](https://app.travis-ci.com/github/chervintani/react-google-calendar-1)   
+![npm (scoped)](https://img.shields.io/npm/v/@chervint/react-google-calendar) [![Build Status](https://api.travis-ci.com/chervintani/react-google-calendar.svg?branch=master)](https://app.travis-ci.com/github/chervintani/react-google-calendar)   
   
 This is a forked repository from [ericz1803/react-google-calendar](https://github.com/ericz1803/react-google-calendar)
 

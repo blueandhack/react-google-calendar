@@ -9,7 +9,7 @@ See it in action [here](https://chervint.github.io/react-test-calendar/) or try 
 Features added:
 - Calendar events in a day is sorted
 - "Copy to Calendar" to "Go to Calendar" to go to specific date on click
-- Can pass `selectedMonthYear` to select specific month in the calendar
+- Added `selectedMonthYear` to select specific month in the calendar
 
 ### Properties
 | Parameter             | Type             | Description                                                                     |
@@ -20,7 +20,7 @@ Features added:
 | `showArrow`           | boolean          | shows arrow for events that span multiple months (optional, defaults to `true`) |
 | `showFooter`          | boolean          | whether or not to show footer (optional, defaults to `true`)                    |
 | `language`            | string           | Available options : 'ES', 'PT', 'FR', 'SL' default: 'EN'                        |
-| `selectedMonthYear`   | moment           | select specific month in the calendar (optional)                                |
+| `selectedMonthYear`   | moment(date)     | select specific month in the calendar (optional)                                |
 
 ### More Information
 

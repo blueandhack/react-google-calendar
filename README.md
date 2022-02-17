@@ -20,7 +20,7 @@ Features added:
 | `showArrow`           | boolean          | shows arrow for events that span multiple months (optional, defaults to `true`) |
 | `showFooter`          | boolean          | whether or not to show footer (optional, defaults to `true`)                    |
 | `language`            | string           | Available options : 'ES', 'PT', 'FR', 'SL' default: 'EN'                        |
-| `selectedMonthYear`   | moment           | select specific month in the calendar                                           |
+| `selectedMonthYear`   | moment           | select specific month in the calendar (optional)                                |
 
 ### More Information
 

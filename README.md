@@ -10,7 +10,7 @@ Features added:
 - Calendar events in a day is sorted
 - "Copy to Calendar" to "Go to Calendar" to go to specific date on click
 - Added `selectedMonthYear` to select specific month in the calendar
-
+- Added `updatedMonthYear` to get the month on click previous/next
 ### Properties
 | Parameter             | Type             | Description                                                                     |
 |-----------------------|------------------|---------------------------------------------------------------------------------|

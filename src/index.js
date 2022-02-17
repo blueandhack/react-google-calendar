@@ -228,8 +228,8 @@ export default class Calendar extends React.Component {
   //sets current month to following month
   nextMonth() {
     const newCurrent = this.state.current.add(1, "months");
-    this.setState(newCurrent);
     this.props.updatedMonthYear(newCurrent);
+    this.setState({ current: newCurrent });
   }
 
   clearEvents() {
@@ -338,8 +338,6 @@ export default class Calendar extends React.Component {
     let eventsEachDay = [...Array(this.state.current.daysInMonth())].map(
       (e) => []
     ); //create array of empty arrays of length daysInMonth
-
-    console.log("eventsEachDay", eventsEachDay);
 
     events.forEach((event) => {
       if (event.recurrence) {

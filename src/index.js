@@ -4,7 +4,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import moment from "moment-timezone";
-import { RRule, RRuleSet, rrulestr } from "rrule";
+import { rrulestr } from "rrule";
 
 import "./index.css";
 

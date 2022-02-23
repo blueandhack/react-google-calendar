@@ -12,7 +12,7 @@ describe("Tooltip Time Display", () => {
     let endTime = moment.utc("2020-04-20T15:30:00+00:00");
 
     let output = Tooltip.getTimeDisplay(startTime, endTime, false);
-    let expected = "Monday, April 20th\n4:30am - 3:30pm";
+    let expected = "Monday, April 20th\n4:30 AM - 3:30 PM";
     
     expect(output).toEqual(expected);
   });
@@ -43,7 +43,7 @@ describe("Tooltip Time Display", () => {
     let endTime = moment.utc("2020-03-25T15:30:00+00:00");
     
     let output = Tooltip.getTimeDisplay(startTime, endTime, false);
-    let expected = "Mar 20th, 2020, 4:30am -\nMar 25th, 2020, 3:30pm";
+    let expected = "Mar 20th, 2020, 4:30 AM -\nMar 25th, 2020, 3:30 PM";
 
     expect(output).toEqual(expected);
   });

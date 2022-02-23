@@ -57,15 +57,15 @@ export default class Tooltip extends React.Component {
         return (
           startTime.format("dddd, MMMM Do") +
           "\n" +
-          startTime.format("h:mma") +
+          startTime.format("h:mm A") +
           " - " +
-          endTime.format("h:mma")
+          endTime.format("h:mm A")
         );
       } else {
         return (
-          startTime.format("MMM Do, YYYY, h:mma") +
+          startTime.format("MMM Do, YYYY, h:mm A") +
           " -\n" +
-          endTime.format("MMM Do, YYYY, h:mma")
+          endTime.format("MMM Do, YYYY, h:mm A")
         );
       }
     }

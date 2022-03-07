@@ -43,6 +43,22 @@ export default class Calendar extends React.Component {
     this.nextMonth = this.nextMonth.bind(this);
   }
 
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.selectedMonthYear) {
+      nextProps.selectedMonthYear.isValid()
+        ? this.setState({
+            current: moment(
+              `${moment(nextProps.selectedMonthYear)
+                .startOf("month")
+                .utc(true)}`
+            ),
+          })
+        : this.setState({
+            current: moment(`${moment().startOf("month").utc(true)}`),
+          });
+    }
+  }
+
   async componentDidMount() {
     if (
       Boolean(this.props.language) &&
@@ -90,23 +106,6 @@ export default class Calendar extends React.Component {
       } catch (err) {
         console.error("Error getting events", err);
       }
-    }
-  }
-
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.selectedMonthYear) {
-      nextProps.selectedMonthYear.isValid()
-        ? this.setState({
-            current: moment(
-              `${moment(nextProps.selectedMonthYear)
-                .startOf("month")
-                .utc(true)
-                .format("MMMM YYYY")}`
-            ),
-          })
-        : this.setState({
-            current: moment(`${moment().startOf("month").utc(true)}`),
-          });
     }
   }
 
@@ -222,14 +221,14 @@ export default class Calendar extends React.Component {
   lastMonth() {
     const newCurrent = this.state.current.subtract(1, "months");
     this.props.updatedMonthYear(newCurrent);
-    this.setState({ current: newCurrent });
+    this.setState({ current: moment(newCurrent).startOf("month").utc(true) });
   }
 
   //sets current month to following month
   nextMonth() {
     const newCurrent = this.state.current.add(1, "months");
     this.props.updatedMonthYear(newCurrent);
-    this.setState({ current: newCurrent });
+    this.setState({ current: moment(newCurrent).startOf("month").utc(true) });
   }
 
   clearEvents() {
@@ -805,5 +804,4 @@ Calendar.defaultProps = {
   showArrow: true,
   showFooter: true,
   selectedMonthYear: null,
-  updatedMonthYear: null,
 };

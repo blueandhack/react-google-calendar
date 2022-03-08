@@ -1,5 +1,5 @@
 {
-  "name": "@chervint/react-google-calendar",
+  "name": "@chervinvananaz/react-google-calendar",
   "version": "4.2.37",
   "description": "React Google Calendar Component",
   "main": "index.js",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/chervintani/react-google-calendar.git"
+    "url": "git+https://github.com/vananaz-systems/react-google-calendar.git"
   },
   "author": "Chervin Tanilon",
   "license": "MIT",

@@ -1,6 +1,6 @@
 {
-  "name": "@chervinvananaz/react-google-calendar",
-  "version": "4.2.39",
+  "name": "@yogalin/react-google-calendar",
+  "version": "4.2.41",
   "description": "React Google Calendar Component",
   "main": "index.js",
   "scripts": {
@@ -11,7 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/vananaz-systems/react-google-calendar.git"
   },
-  "author": "Chervin Tanilon",
+  "author": "Yoga Lin",
   "license": "MIT",
   "keywords": [
     "react",

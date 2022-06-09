@@ -108,7 +108,18 @@ export default class Tooltip extends React.Component {
             <Place fill="currentColor" />
           </div>
           <div
-            css={{ overflowWrap: "break-word", maxWidth: "calc(100% - 28px)" }}
+            css={{
+              overflowWrap: "break-word",
+              maxWidth: "calc(100% - 28px)",
+              cursor: "pointer",
+              textDecoration: "underline",
+            }}
+            onClick={() => {
+              window.open(
+                "https://maps.google.com/?q=" + this.props.location,
+                "_blank"
+              );
+            }}
           >
             {this.props.location}
           </div>
